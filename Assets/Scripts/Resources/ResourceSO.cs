@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 
 [CreateAssetMenu(fileName = "ResourceSO", menuName = "Scriptable Objects/Resource")]
 public class ResourceSO : ScriptableObject

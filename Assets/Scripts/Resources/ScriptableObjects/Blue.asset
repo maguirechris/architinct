@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7772d8ccb782f40900efb756cdfcfc, type: 3}
   m_Name: Blue
   m_EditorClassIdentifier: 
-  value: 0
-  limit: 0
-  gainRate: 0
-  resourceType: 
+  value: 5000000
+  limit: 5000000
+  gainRate: 700000
+  resourceType: blue
