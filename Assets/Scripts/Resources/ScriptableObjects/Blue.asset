@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Blue
   m_EditorClassIdentifier: 
   value: 0
-  limit: 0
+  limit: 500
   gainRate: 0
-  resourceType: 
+  resourceType: blue
