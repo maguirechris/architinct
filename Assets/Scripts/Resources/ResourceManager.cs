@@ -257,4 +257,34 @@ public class ResourceManager : MonoBehaviour
 
         return resource.limit;
     }
+
+    public void Pay(Cost cost)
+    {
+
+        float r = cost.red;
+        float g = cost.green;
+        float b = cost.blue;
+
+        if (CanPay(cost))
+        {
+            redSO.value -= r;
+            greenSO.value -= g;
+            blueSO.value -= b;
+        }
+
+    }
+
+    public bool CanPay(Cost cost)
+    {
+        float r = cost.red;
+        float g = cost.green;
+        float b = cost.blue;
+
+        if (redSO.value >= r && greenSO.value >= g && blueSO.value >= b)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }
