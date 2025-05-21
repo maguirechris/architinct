@@ -1,16 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
+    public void ClickAndLoad() {
+        Invoke("LoadGame", 0.3f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void LoadGame() {
+        SceneManager.LoadScene("SampleScene");
     }
 }
