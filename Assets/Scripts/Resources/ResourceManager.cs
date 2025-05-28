@@ -76,7 +76,7 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
-    private string GetColorFromEnum(int colorEnum)
+    public string GetColorFromEnum(int colorEnum)
     {
         return resources[colorEnum].resourceType;
     }
