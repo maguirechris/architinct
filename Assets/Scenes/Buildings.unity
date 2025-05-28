@@ -1436,6 +1436,7 @@ GameObject:
   - component: {fileID: 1980047708}
   - component: {fileID: 1980047707}
   - component: {fileID: 1980047709}
+  - component: {fileID: 1980047710}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -1489,6 +1490,22 @@ MonoBehaviour:
   red: 
   green: 
   blue: 
+--- !u!114 &1980047710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980047706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c19aa2aff154486fb9f76789875a2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 909364498}
+  grassTile: {fileID: 11400000, guid: 36c906cdc246f4e7e818c9cc5623dd0c, type: 2}
+  width: 10
+  height: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
