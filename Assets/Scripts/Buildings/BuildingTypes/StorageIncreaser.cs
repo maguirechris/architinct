@@ -1,20 +1,20 @@
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
-public class ProducerMultiplier : MonoBehaviour
+public class StorageIncreaser : Building
 {
     public enum Color
     {
         Red, Blue, Green
     }
 
-    public float multiplier;
     public Color[] colors;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         for (int i = 0; i < colors.Length; i++)
         {
-            ResourceManager.Instance.ChangeMultiplier(multiplier, ResourceManager.Instance.GetColorFromEnum((int)colors[i]));
+            ResourceManager.Instance.ChangeLimit(value, ResourceManager.Instance.GetColorFromEnum((int)colors[i]));
         }
 
     }
