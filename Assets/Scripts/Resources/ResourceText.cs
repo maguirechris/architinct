@@ -22,7 +22,7 @@ public class ResourceText : MonoBehaviour
     void Update()
     {
         float value = resourceManager.GetValue((int)resourceType);
-        float gainRate = resourceManager.GetGainRate((int)resourceType);
+        float gainRate = resourceManager.GetGainRate((int)resourceType) * resourceManager.GetMultiplier((int)resourceType);
         string newText = label;
         if (value == 0)
             newText += ": 0";
