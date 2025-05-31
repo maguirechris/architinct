@@ -2428,6 +2428,7 @@ GameObject:
   - component: {fileID: 1980047708}
   - component: {fileID: 1980047707}
   - component: {fileID: 1980047709}
+  - component: {fileID: 1980047710}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -2840,11 +2841,6 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &4742547213010577691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75831067459555395}
   m_Enabled: 1
   m_EditorHideFlags: 0

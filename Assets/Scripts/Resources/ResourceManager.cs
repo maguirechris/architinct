@@ -46,6 +46,7 @@ public class ResourceManager : MonoBehaviour
             r.value = 0;
             r.gainRate = 0;
             r.limit = 500;
+            r.multiplier = 1;
         }
     }
 
@@ -68,7 +69,7 @@ public class ResourceManager : MonoBehaviour
     {
         foreach (ResourceSO resource in resources)
         {
-            resource.value += resource.gainRate * Time.deltaTime;
+            resource.value += resource.gainRate * Time.deltaTime * resource.multiplier;
             if(resource.value > resource.limit)
             {
                 resource.value = resource.limit;
@@ -256,6 +257,65 @@ public class ResourceManager : MonoBehaviour
         }
 
         return resource.limit;
+    }
+
+    public float GetMultiplier(string color)
+    {
+        ResourceSO resource = ValidateResource(color);
+
+        if (resource == null)
+        {
+            Debug.Log("Invalid resource!");
+            return 0;
+        }
+
+        return resource.multiplier;
+    }
+
+    public float GetMultiplier(int colorEnum)
+    {
+
+        string color = GetColorFromEnum(colorEnum);
+        ResourceSO resource = ValidateResource(color);
+
+        if (resource == null)
+        {
+            Debug.Log("Invalid resource!");
+            return 0;
+        }
+
+        return resource.multiplier;
+    }
+
+    public void ChangeMultiplier(float value, int colorEnum)
+    {
+
+        string color = GetColorFromEnum(colorEnum);
+
+        ResourceSO resource = ValidateResource(color);
+
+        if (resource == null)
+        {
+            Debug.Log("Invalid resource!");
+            return;
+        }
+
+        resource.multiplier += value;
+
+    }
+
+    public void ChangeMultiplier(float value, string color)
+    {
+        ResourceSO resource = ValidateResource(color);
+
+        if (resource == null)
+        {
+            Debug.Log("Invalid resource!");
+            return;
+        }
+
+        resource.multiplier += value;
+
     }
 
     public void Pay(Cost cost)
