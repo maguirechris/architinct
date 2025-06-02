@@ -22,7 +22,9 @@ public class PlaceBuilding : MonoBehaviour
                 Collider2D[] existing = Physics2D.OverlapCircleAll(tileCenter, 0.1f);
                 if (existing.Length == 0)
                 {
-                    Instantiate(buildingPrefab, tileCenter, Quaternion.identity);
+                    GameObject newBuilding = Instantiate(buildingPrefab, tileCenter, Quaternion.identity);
+                    newBuilding.transform.parent = transform;
+                    newBuilding.SetActive(true);
                 }
                 else
                 {
