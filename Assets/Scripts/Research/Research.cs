@@ -13,17 +13,13 @@ public class Research : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         locked = lockedOnStart;
         foreach(Research research in unlocks)
         {
             research.numPrereqs++;
         }
-
-        foreach(Building building in buildings)
-            if (building)
-                building.ApplyResearch(researchSO);
 
     }
 
@@ -49,7 +45,15 @@ public class Research : MonoBehaviour
 
             foreach (Building building in buildings)
                 if (building)
+                {
                     building.ApplyResearch(researchSO);
+                    foreach (Building placedBuilding in building.transform.parent.GetComponent<PlacedBuildingManager>().placedBuildings)
+                    {
+                        float oldval = placedBuilding.ApplyResearch(researchSO);
+                        placedBuilding.OnUpgrade(oldval);
+                    }
+                }
+            
 
         }
 

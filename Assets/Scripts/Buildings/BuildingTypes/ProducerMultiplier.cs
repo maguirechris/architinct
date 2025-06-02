@@ -13,8 +13,16 @@ public class ProducerMultiplier : Building
     {
         for (int i = 0; i < colors.Length; i++)
         {
-            ResourceManager.Instance.ChangeMultiplier(value, ResourceManager.Instance.GetColorFromEnum((int)colors[i]));
+            ResourceManager.Instance.ChangeMultiplier(value * multiplier, ResourceManager.Instance.GetColorFromEnum((int)colors[i]));
         }
 
+    }
+
+    public override void OnUpgrade(float oldValue)
+    {
+        for (int i = 0; i < colors.Length; i++)
+        {
+            ResourceManager.Instance.ChangeMultiplier((value * multiplier) - oldValue, ResourceManager.Instance.GetColorFromEnum((int)colors[i]));
+        }
     }
 }
