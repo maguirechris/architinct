@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8547060929674345547}
   - component: {fileID: 8240002812534198817}
   - component: {fileID: -313074542157815444}
+  - component: {fileID: -4618326774150451913}
   m_Layer: 0
   m_Name: blue
   m_TagString: Untagged
@@ -91,5 +92,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85eaccee3e22bf4e8a73b95ed06fe9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startValue: 1
+  startMult: 1
   value: 1
+  multiplier: 0
+  cost: {fileID: -4618326774150451913}
   color: 1
+--- !u!114 &-4618326774150451913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3659835778922223584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26b16531c75f774eae591491f09595e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  red: 0
+  green: 0
+  blue: 0

@@ -25,6 +25,8 @@ public class PlaceBuilding : MonoBehaviour
                     GameObject newBuilding = Instantiate(buildingPrefab, tileCenter, Quaternion.identity);
                     newBuilding.transform.parent = transform;
                     newBuilding.SetActive(true);
+                    PlacedBuildingManager manager = buildingPrefab.transform.parent.gameObject.GetComponent<PlacedBuildingManager>();
+                    manager.placedBuildings.Add(newBuilding.GetComponent<Building>());
                 }
                 else
                 {

@@ -14,8 +14,16 @@ public class StorageIncreaser : Building
     {
         for (int i = 0; i < colors.Length; i++)
         {
-            ResourceManager.Instance.ChangeLimit(value, ResourceManager.Instance.GetColorFromEnum((int)colors[i]));
+            ResourceManager.Instance.ChangeLimit(value * multiplier, ResourceManager.Instance.GetColorFromEnum((int)colors[i]));
         }
 
+    }
+
+    public override void OnUpgrade(float oldValue)
+    {
+        for (int i = 0; i < colors.Length; i++)
+        {
+            ResourceManager.Instance.ChangeLimit((value * multiplier) - oldValue, ResourceManager.Instance.GetColorFromEnum((int)colors[i]));
+        }
     }
 }
