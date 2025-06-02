@@ -295,7 +295,8 @@ MonoBehaviour:
   numPrereqs: 0
   cost: {fileID: 0}
   unlocks: []
-  building: {fileID: 0}
+  buildings: []
+  researchSO: {fileID: 0}
 --- !u!224 &21693129 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4651263383291049804, guid: b400c6ed29e56be47a7cfefdef144827, type: 3}
@@ -858,6 +859,7 @@ GameObject:
   - component: {fileID: 909364496}
   - component: {fileID: 909364498}
   - component: {fileID: 909364497}
+  - component: {fileID: 909364499}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -923,7 +925,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2016,6 +2018,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &909364499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909364495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e694612ef20247bcbb65267ff5bc566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hexTilemap: {fileID: 909364498}
+  buildingPrefab: {fileID: 3659835778922223584, guid: be26aca4bb10947798c00277c788f624, type: 3}
 --- !u!1001 &1189756745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2467,6 +2483,7 @@ GameObject:
   - component: {fileID: 1835861557}
   - component: {fileID: 1835861556}
   - component: {fileID: 1835861559}
+  - component: {fileID: 1835861560}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2592,6 +2609,19 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1835861560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835861555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9156b3eab0250404ebc5ca673416b279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &1862893512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3162,6 +3192,7 @@ GameObject:
   - component: {fileID: 1980047708}
   - component: {fileID: 1980047707}
   - component: {fileID: 1980047709}
+  - component: {fileID: 1980047710}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -3215,6 +3246,22 @@ MonoBehaviour:
   red: 
   green: 
   blue: 
+--- !u!114 &1980047710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980047706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c19aa2aff154486fb9f76789875a2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 909364498}
+  grassTile: {fileID: 11400000, guid: 36c906cdc246f4e7e818c9cc5623dd0c, type: 2}
+  width: 10
+  height: 10
 --- !u!1001 &2111363862
 PrefabInstance:
   m_ObjectHideFlags: 0

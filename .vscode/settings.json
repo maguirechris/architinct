@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Architinct.sln"
+    "dotnet.defaultSolution": "Architinct-v2.sln"
 }
