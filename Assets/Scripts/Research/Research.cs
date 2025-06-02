@@ -8,7 +8,8 @@ public class Research : MonoBehaviour
     [HideInInspector] public int numPrereqs;
     public Cost cost;
     public Research[] unlocks;
-    public Building building;
+    public Building[] buildings;
+    public ResearchSO researchSO;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,8 +21,9 @@ public class Research : MonoBehaviour
             research.numPrereqs++;
         }
 
-        if (building)
-            building.researched = !locked;
+        foreach(Building building in buildings)
+            if (building)
+                building.ApplyResearch(researchSO);
 
     }
 
@@ -45,8 +47,9 @@ public class Research : MonoBehaviour
                 research.Unlock();
             }
 
-            if (building)
-                building.researched = true;
+            foreach (Building building in buildings)
+                if (building)
+                    building.ApplyResearch(researchSO);
 
         }
 
