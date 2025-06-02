@@ -3,22 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour, IMenu
 {
     public GameObject pauseMenu;
 
     void Update() {
-        if (Input.GetKey(KeyCode.Escape)) {
-            Pause();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!MenuManager.IsAnyMenuOpen())
+            {
+                MenuManager.OpenOverlayMenu(this); ;
+            }
+            else
+            {
+                MenuManager.CloseOverlayMenu();
+            }
         }
     }
 
-    public void Pause() {
+    public void Open() {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
     }
 
-    public void Resume() {
+    public void Close() {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
