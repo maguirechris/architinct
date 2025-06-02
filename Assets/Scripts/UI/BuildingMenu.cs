@@ -1,18 +1,30 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
-public class BuildlingScript : MonoBehaviour
+public class BuildlingMenu : MonoBehaviour, IMenu
 {
     public GameObject buildingMenu;
     public GameObject tileMap;
     public GameObject resources;
 
-    void Update() {
-        if (Input.GetKey(KeyCode.B)) {
-            openMenu();
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (!MenuManager.IsPrimaryMenuOpen())
+            {
+                MenuManager.OpenPrimaryMenu(this);
+            }
+            else
+            {
+                MenuManager.ClosePrimaryMenu();
+            }
         }
     }
 
-    public void openMenu()
+    public void Open()
     {
         buildingMenu.SetActive(true);
         tileMap.SetActive(false);
@@ -20,11 +32,23 @@ public class BuildlingScript : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void closeMenu()
+    public void Close()
     {
         buildingMenu.SetActive(false);
         tileMap.SetActive(true);
         resources.SetActive(true);
         Time.timeScale = 1;
+    }
+
+    public void OnBuildingButtonPressed()
+    {
+        if (!MenuManager.IsAnyMenuOpen())
+        {
+            MenuManager.OpenPrimaryMenu(this);
+        }
+        else
+        {
+            MenuManager.ClosePrimaryMenu();
+        }
     }
 }

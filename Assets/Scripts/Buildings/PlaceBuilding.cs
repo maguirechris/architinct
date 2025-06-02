@@ -5,9 +5,11 @@ public class PlaceBuilding : MonoBehaviour
 {
     public Tilemap hexTilemap;              // Reference to the hex tilemap
     public GameObject buildingPrefab;       // Reference to the building prefab
+    public bool isPlacing = false;
 
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0)) // Left-click
         {
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -34,5 +36,16 @@ public class PlaceBuilding : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetPlacementMode(bool enabled)
+    {
+        isPlacing = enabled;
+    }
+    
+
+    public void TogglePlacement()
+    {
+        isPlacing = !isPlacing;
     }
 }
