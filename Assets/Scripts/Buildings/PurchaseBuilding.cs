@@ -1,14 +1,14 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PurchaseBuilding : MonoBehaviour
 {
-    public GameObject buildingPrefab;
-    public GameObject buildingMenu;
-    public Cost cost;
+    public Building buildingPrefab;
+    private GameObject buildingMenu;
 
     public void Purchase()
     {
-        Cost cost = buildingPrefab.GetComponent<Cost>();
+        Cost cost = buildingPrefab.cost;
         if (cost == null)
         {
             Debug.LogError("Building prefab does not have a price.");
@@ -17,18 +17,19 @@ public class PurchaseBuilding : MonoBehaviour
 
         if (ResourceManager.Instance.CanPay(cost))
         {
-            ResourceManager.Instance.Pay(cost);
 
-            PlaceBuilding placer = Object.FindFirstObjectByType<PlaceBuilding>();
+            PlaceBuilding placer = PlaceBuilding.Instance;
             if (placer != null)
             {
-                placer.buildingPrefab = buildingPrefab;
+                placer.StartBuildMode(buildingPrefab);
+                
                 placer.SetPlacementMode(true);
+                
             }
 
             if (buildingMenu != null)
             {
-                buildingMenu.SetActive(false);
+                MenuManager.ClosePrimaryMenu();
             }
         }
     }
@@ -36,7 +37,7 @@ public class PurchaseBuilding : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        buildingMenu = BuildingMenu.Instance.gameObject;
     }
 
     // Update is called once per frame

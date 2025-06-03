@@ -11,7 +11,8 @@ public class ClickProducer : Building
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnMouseDown()
     {
-        ResourceManager.Instance.ChangeValue(value * multiplier, ResourceManager.Instance.GetColorFromEnum((int)color));
+        if(!PlaceBuilding.Instance.isPlacing)
+            ResourceManager.Instance.ChangeValue(value * multiplier, ResourceManager.Instance.GetColorFromEnum((int)color));
     }
 
 }

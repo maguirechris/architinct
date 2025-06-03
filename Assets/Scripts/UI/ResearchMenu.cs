@@ -42,7 +42,7 @@ public class ResearchMenu : MonoBehaviour, IMenu
 
     public void OnResearchButtonPressed()
     {
-        if (!MenuManager.IsAnyMenuOpen())
+        if (!MenuManager.IsAnyMenuOpen() || !MenuManager.GetCurrentPrimaryMenu().Equals(this))
         {
             MenuManager.OpenPrimaryMenu(this);
         }

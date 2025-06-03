@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   red: 0
-  green: 0
-  blue: 0
+  green: 1
+  blue: 4
 --- !u!212 &9092155062586690968
 SpriteRenderer:
   m_ObjectHideFlags: 0

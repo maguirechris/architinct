@@ -55,4 +55,9 @@ public static class MenuManager
     {
         return primaryMenu != null || overlayMenu != null;
     }
+
+    public static IMenu GetCurrentPrimaryMenu()
+    {
+        return primaryMenu;
+    }
 }

@@ -3,12 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class BuildlingMenu : MonoBehaviour, IMenu
+public class BuildingMenu : MonoBehaviour, IMenu
 {
     public GameObject buildingMenu;
     public GameObject tileMap;
     public GameObject resources;
-
+    public static BuildingMenu Instance;
+    void Start()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
@@ -42,7 +49,7 @@ public class BuildlingMenu : MonoBehaviour, IMenu
 
     public void OnBuildingButtonPressed()
     {
-        if (!MenuManager.IsAnyMenuOpen())
+        if (!MenuManager.IsAnyMenuOpen() || !MenuManager.GetCurrentPrimaryMenu().Equals(this))
         {
             MenuManager.OpenPrimaryMenu(this);
         }

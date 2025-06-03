@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour, IMenu
     public GameObject pauseMenu;
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !PlaceBuilding.Instance.isPlacing)
         {
             if (!MenuManager.IsAnyMenuOpen())
             {

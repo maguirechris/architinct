@@ -2110,6 +2110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hexTilemap: {fileID: 909364498}
   buildingPrefab: {fileID: 377979216}
+  isPlacing: 0
 --- !u!1001 &1082745603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3675,7 +3676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!223 &343589646986017976
 Canvas:
   m_ObjectHideFlags: 0

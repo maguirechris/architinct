@@ -92,10 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85eaccee3e22bf4e8a73b95ed06fe9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startValue: 1
-  startMult: 1
   value: 1
-  multiplier: 0
+  multiplier: 1
   cost: {fileID: 678405943313207226}
   color: 2
 --- !u!114 &678405943313207226
