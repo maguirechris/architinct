@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 58978182}
   audioSource: {fileID: 1823753247}
-  menuToggle: {fileID: 8300000, guid: 632b1c41f6a368540970d173af4f782f, type: 3}
+  menuToggle: {fileID: 8300000, guid: e5c0b5435124eee4a9bab0e4dc5c16b7, type: 3}
   buttonClick: {fileID: 8300000, guid: e5c0b5435124eee4a9bab0e4dc5c16b7, type: 3}
 --- !u!224 &59817810 stripped
 RectTransform:
@@ -13520,7 +13520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 58978182}
   audioSource: {fileID: 1823753247}
-  menuToggle: {fileID: 8300000, guid: 0db8862b7fe5bfa449b0f993e1fff825, type: 3}
+  menuToggle: {fileID: 8300000, guid: e5c0b5435124eee4a9bab0e4dc5c16b7, type: 3}
   buttonClick: {fileID: 8300000, guid: e5c0b5435124eee4a9bab0e4dc5c16b7, type: 3}
 --- !u!1001 &2138511718
 PrefabInstance:

@@ -32,11 +32,11 @@ public class PlaceBuilding : MonoBehaviour
                     if (existing.Length == 0)
                     {
                         GameObject newBuilding = Instantiate(buildingPrefab, tileCenter, Quaternion.identity);
-                        newBuilding.transform.SetParent(transform, false);
-                        //newBuilding.transform.SetParent(transform);
+                        //newBuilding.transform.SetParent(transform, false);
+                        newBuilding.transform.SetParent(transform);
                         newBuilding.SetActive(true);
-                        PlacedBuildingManager manager = FindObjectOfType<PlacedBuildingManager>();
-                        //PlacedBuildingManager manager = buildingPrefab.transform.parent.gameObject.GetComponent<PlacedBuildingManager>();
+                        //PlacedBuildingManager manager = FindObjectOfType<PlacedBuildingManager>();
+                        PlacedBuildingManager manager = buildingPrefab.transform.parent.gameObject.GetComponent<PlacedBuildingManager>();
                         manager.placedBuildings.Add(newBuilding.GetComponent<Building>());
                         ResourceManager.Instance.Pay(cost);
                          if (AudioSource != null && placeBuilding != null)
