@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4875728299665714818}
   - component: {fileID: 9092155062586690968}
   m_Layer: 0
-  m_Name: blueAuto
+  m_Name: redAuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,9 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26b16531c75f774eae591491f09595e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: 0
-  green: 1
-  blue: 4
+  red: 32
+  green: 0
+  blue: 8
 --- !u!212 &9092155062586690968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -160,8 +160,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1572239152, guid: eded5de75cc9848f29eeea3150d578e3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 747196430, guid: 558700bd382d0442c8f49a8cb5b4365b, type: 3}
+  m_Color: {r: 1, g: 0.41883236, b: 0.41883236, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

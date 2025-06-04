@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f433f67174319b47950aa5262c56e3b, type: 3}
-  m_Name: BlueAutoPlusOne
+  m_Name: 20GreenDiscount 1
   m_EditorClassIdentifier: 
-  valueMod: 1
+  valueMod: 0
   valueMult: 0
   costRMult: 1
-  costGMult: 1
+  costGMult: 0.5
   costBMult: 1

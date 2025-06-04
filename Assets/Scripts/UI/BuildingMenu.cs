@@ -39,7 +39,7 @@ public class BuildingMenu : MonoBehaviour, IMenu
         buildingMenu.SetActive(true);
         tileMap.SetActive(false);
         resources.SetActive(false);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         PlaySound(menuToggle);
     }
 
@@ -48,7 +48,7 @@ public class BuildingMenu : MonoBehaviour, IMenu
         buildingMenu.SetActive(false);
         tileMap.SetActive(true);
         resources.SetActive(true);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         PlaySound(menuToggle);
     }
 
@@ -64,6 +64,12 @@ public class BuildingMenu : MonoBehaviour, IMenu
             MenuManager.ClosePrimaryMenu();
             PlaySound(menuToggle);
         }
+    }
+
+    public void OnBackButtonPressed()
+    {
+        MenuManager.ClosePrimaryMenu();
+        PlaySound(menuToggle);
     }
     
     private void PlaySound(AudioClip clip) {

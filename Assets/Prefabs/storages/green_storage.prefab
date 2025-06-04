@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8547060929674345547}
   - component: {fileID: 8240002812534198817}
-  - component: {fileID: 2637429452461624713}
-  - component: {fileID: 5173595120317120610}
-  - component: {fileID: 6433773812499134298}
+  - component: {fileID: -2438155308430995325}
+  - component: {fileID: 1851184953507998014}
+  - component: {fileID: 4861136104076088640}
   m_Layer: 0
-  m_Name: red
+  m_Name: green_storage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2637429452461624713
+--- !u!114 &-2438155308430995325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,14 +90,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3659835778922223584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f85eaccee3e22bf4e8a73b95ed06fe9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 05181368963232f42a95df3bfc186971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 1
-  multiplier: 1
-  cost: {fileID: 5173595120317120610}
-  color: 0
---- !u!114 &5173595120317120610
+  value: 500
+  multiplier: 0
+  cost: {fileID: 1851184953507998014}
+  colors: 00000000
+--- !u!114 &1851184953507998014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   red: 0
-  green: 0
+  green: 80
   blue: 0
---- !u!212 &6433773812499134298
+--- !u!212 &4861136104076088640
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,8 +156,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1925215556, guid: 558700bd382d0442c8f49a8cb5b4365b, type: 3}
-  m_Color: {r: 0.69953716, g: 0, b: 0.057326533, a: 1}
+  m_Sprite: {fileID: -1330652303, guid: 558700bd382d0442c8f49a8cb5b4365b, type: 3}
+  m_Color: {r: 0.21579714, g: 0.90459234, b: 0.0929067, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
