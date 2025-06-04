@@ -14,10 +14,8 @@ public class BuildingMenu : MonoBehaviour, IMenu
 
     void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
+        Instance = this;
+        
     }
     void Update()
     {
