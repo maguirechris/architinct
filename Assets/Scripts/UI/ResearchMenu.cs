@@ -33,7 +33,7 @@ public class ResearchMenu : MonoBehaviour, IMenu
         researchMenu.SetActive(true);
         tileMap.SetActive(false);
         resources.SetActive(false);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         PlaySound(menuToggle);
     }
 
@@ -42,7 +42,7 @@ public class ResearchMenu : MonoBehaviour, IMenu
         researchMenu.SetActive(false);
         tileMap.SetActive(true);
         resources.SetActive(true);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         PlaySound(menuToggle);
     }
 
@@ -58,6 +58,11 @@ public class ResearchMenu : MonoBehaviour, IMenu
             MenuManager.ClosePrimaryMenu();
             PlaySound(menuToggle);
         }
+    }
+    public void OnBackButtonPressed()
+    {
+        MenuManager.ClosePrimaryMenu();
+        PlaySound(menuToggle);
     }
 
     private void PlaySound(AudioClip clip) {

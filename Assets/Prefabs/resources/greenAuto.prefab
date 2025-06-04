@@ -10,24 +10,23 @@ GameObject:
   m_Component:
   - component: {fileID: 8547060929674345547}
   - component: {fileID: 8240002812534198817}
-  - component: {fileID: 2637429452461624713}
-  - component: {fileID: 5173595120317120610}
-  - component: {fileID: 6433773812499134298}
+  - component: {fileID: 6444843167232805941}
+  - component: {fileID: 4875728299665714818}
+  - component: {fileID: 9092155062586690968}
   m_Layer: 0
-  m_Name: red
+  m_Name: greenAuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8547060929674345547
-Transform:
+--- !u!224 &8547060929674345547
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3659835778922223584}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,6 +34,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &8240002812534198817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81,7 +85,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2637429452461624713
+--- !u!114 &6444843167232805941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,14 +94,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3659835778922223584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f85eaccee3e22bf4e8a73b95ed06fe9b, type: 3}
+  m_Script: {fileID: 11500000, guid: cbe20374fb163f24bb3e3221ae0a2bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
   multiplier: 1
-  cost: {fileID: 5173595120317120610}
-  color: 0
---- !u!114 &5173595120317120610
+  cost: {fileID: 4875728299665714818}
+  colors: 01000000
+--- !u!114 &4875728299665714818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,10 +113,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26b16531c75f774eae591491f09595e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: 0
-  green: 0
+  red: 8
+  green: 32
   blue: 0
---- !u!212 &6433773812499134298
+--- !u!212 &9092155062586690968
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,8 +160,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1925215556, guid: 558700bd382d0442c8f49a8cb5b4365b, type: 3}
-  m_Color: {r: 0.69953716, g: 0, b: 0.057326533, a: 1}
+  m_Sprite: {fileID: 1145376737, guid: 558700bd382d0442c8f49a8cb5b4365b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
