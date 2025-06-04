@@ -9,12 +9,13 @@ public class BuildingMenu : MonoBehaviour, IMenu
     public GameObject tileMap;
     public GameObject resources;
     public static BuildingMenu Instance;
+    public AudioSource audioSource;
+    public AudioClip menuToggle;
+
     void Start()
     {
-        if(Instance == null)
-        {
-            Instance = this;
-        }
+        Instance = this;
+        
     }
     void Update()
     {
@@ -23,10 +24,12 @@ public class BuildingMenu : MonoBehaviour, IMenu
             if (!MenuManager.IsPrimaryMenuOpen())
             {
                 MenuManager.OpenPrimaryMenu(this);
+                PlaySound(menuToggle);
             }
             else
             {
                 MenuManager.ClosePrimaryMenu();
+                PlaySound(menuToggle);
             }
         }
     }
@@ -37,6 +40,7 @@ public class BuildingMenu : MonoBehaviour, IMenu
         tileMap.SetActive(false);
         resources.SetActive(false);
         Time.timeScale = 0;
+        PlaySound(menuToggle);
     }
 
     public void Close()
@@ -45,6 +49,7 @@ public class BuildingMenu : MonoBehaviour, IMenu
         tileMap.SetActive(true);
         resources.SetActive(true);
         Time.timeScale = 1;
+        PlaySound(menuToggle);
     }
 
     public void OnBuildingButtonPressed()
@@ -52,10 +57,20 @@ public class BuildingMenu : MonoBehaviour, IMenu
         if (!MenuManager.IsAnyMenuOpen() || !MenuManager.GetCurrentPrimaryMenu().Equals(this))
         {
             MenuManager.OpenPrimaryMenu(this);
+            PlaySound(menuToggle);
         }
         else
         {
             MenuManager.ClosePrimaryMenu();
+            PlaySound(menuToggle);
+        }
+    }
+    
+    private void PlaySound(AudioClip clip) {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 }
