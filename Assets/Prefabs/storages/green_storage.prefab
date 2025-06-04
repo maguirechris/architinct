@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 500
-  multiplier: 0
+  multiplier: 1
   cost: {fileID: 1851184953507998014}
   colors: 02000000
 --- !u!114 &1851184953507998014
