@@ -2453,6 +2453,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 909364496}
     m_Modifications:
+    - target: {fileID: 2637429452461624713, guid: 869b289756c4a42d1824345e4c2f86e9, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1823753247}
+    - target: {fileID: 2637429452461624713, guid: 869b289756c4a42d1824345e4c2f86e9, type: 3}
+      propertyPath: collectResource
+      value: 
+      objectReference: {fileID: 8300000, guid: d4b4564ad8ca7254c9d41efb905858eb, type: 3}
     - target: {fileID: 3659835778922223584, guid: 869b289756c4a42d1824345e4c2f86e9, type: 3}
       propertyPath: m_Name
       value: red
@@ -2515,6 +2523,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 909364496}
     m_Modifications:
+    - target: {fileID: -313074542157815444, guid: e3ff1ff90b32940d2bbd1d11abb3c801, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1823753247}
+    - target: {fileID: -313074542157815444, guid: e3ff1ff90b32940d2bbd1d11abb3c801, type: 3}
+      propertyPath: collectResource
+      value: 
+      objectReference: {fileID: 8300000, guid: d4b4564ad8ca7254c9d41efb905858eb, type: 3}
     - target: {fileID: 3659835778922223584, guid: e3ff1ff90b32940d2bbd1d11abb3c801, type: 3}
       propertyPath: m_Name
       value: blue
@@ -9398,6 +9414,8 @@ MonoBehaviour:
   buildingPrefab: {fileID: 3659835778922223584, guid: be26aca4bb10947798c00277c788f624, type: 3}
   isPlacing: 0
   buildMode: {fileID: 2004767461}
+  AudioSource: {fileID: 1823753247}
+  placeBuilding: {fileID: 8300000, guid: c5e2a73ad4706440f93bf05df0b465fe, type: 3}
 --- !u!1 &1032319046
 GameObject:
   m_ObjectHideFlags: 0
@@ -10415,6 +10433,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 909364496}
     m_Modifications:
+    - target: {fileID: -6816372906285731380, guid: 52dafca6a62bd42cabc6603216b3f8e0, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1823753247}
+    - target: {fileID: -6816372906285731380, guid: 52dafca6a62bd42cabc6603216b3f8e0, type: 3}
+      propertyPath: collectResource
+      value: 
+      objectReference: {fileID: 8300000, guid: d4b4564ad8ca7254c9d41efb905858eb, type: 3}
     - target: {fileID: 3659835778922223584, guid: 52dafca6a62bd42cabc6603216b3f8e0, type: 3}
       propertyPath: m_Name
       value: green

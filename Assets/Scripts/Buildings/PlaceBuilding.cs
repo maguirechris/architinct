@@ -10,6 +10,8 @@ public class PlaceBuilding : MonoBehaviour
     public bool isPlacing = false;
     public static PlaceBuilding Instance;
     public Image buildMode;
+    public AudioSource AudioSource;
+    public AudioClip placeBuilding;
 
     void Update()
     {
@@ -30,11 +32,18 @@ public class PlaceBuilding : MonoBehaviour
                     if (existing.Length == 0)
                     {
                         GameObject newBuilding = Instantiate(buildingPrefab, tileCenter, Quaternion.identity);
-                        newBuilding.transform.SetParent(transform);
+                        newBuilding.transform.SetParent(transform, false);
+                        //newBuilding.transform.SetParent(transform);
                         newBuilding.SetActive(true);
-                        PlacedBuildingManager manager = buildingPrefab.transform.parent.gameObject.GetComponent<PlacedBuildingManager>();
+                        PlacedBuildingManager manager = FindObjectOfType<PlacedBuildingManager>();
+                        //PlacedBuildingManager manager = buildingPrefab.transform.parent.gameObject.GetComponent<PlacedBuildingManager>();
                         manager.placedBuildings.Add(newBuilding.GetComponent<Building>());
                         ResourceManager.Instance.Pay(cost);
+                         if (AudioSource != null && placeBuilding != null)
+                        {
+                            AudioSource.PlayOneShot(placeBuilding);
+                        }
+
                         if (!ResourceManager.Instance.CanPay(cost))
                             EndBuildMode();
                         
