@@ -96,7 +96,7 @@ MonoBehaviour:
   value: 500
   multiplier: 0
   cost: {fileID: 1851184953507998014}
-  colors: 00000000
+  colors: 02000000
 --- !u!114 &1851184953507998014
 MonoBehaviour:
   m_ObjectHideFlags: 0

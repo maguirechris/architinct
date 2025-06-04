@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7772d8ccb782f40900efb756cdfcfc, type: 3}
   m_Name: Green
   m_EditorClassIdentifier: 
-  value: 0
+  value: 137.26045
   limit: 500
-  gainRate: 0
+  gainRate: 2
+  multiplier: 1
   resourceType: green
